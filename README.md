@@ -5,4 +5,4 @@ A tool for integrating SharpSpring with circle S studio's WordPress website.
 Lorem ipsum dolor sit amet.
 
 ## View Widget
-Lorem linkup dolor sit linket.
+https://andrewmichael1851.github.io/css-sharpspring-widget/
