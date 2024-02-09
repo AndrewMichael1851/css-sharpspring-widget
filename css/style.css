@@ -1,0 +1,160 @@
+/* Base Styling for Page */
+:root {
+    --border-color: #ddd;
+    --button-search-font: #3c4043;
+    --button-search-background: #f2f2f2;
+    --footer-background: #f2f2f2;
+    --footer-font: #70757a;
+    --footer-font-hover: #3c4043;
+    --footer-font-active: #ea4335;
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    width: 85vw;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    font-family: "Courier New", "Courier", "Lucida Sans Typewriter", "Lucida Typewriter", "monospace";
+}
+
+nav,
+main,
+footer {
+    padding: 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0.5em 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+button {
+    border: none;
+    font-family: inherit;
+}
+
+button:focus {
+    outline: none;
+}
+
+.navbar {
+    padding-top: 14px;
+}
+
+.flex-content,
+.flex-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.left-section {
+    display: flex;
+}
+
+.right-section {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.content,
+.left-section,
+.right-section {
+    margin: 7px 10px;
+    align-items: center;
+}
+
+button,
+.nav-link,
+.footer-link {
+    font-size: 13px;
+    line-height: 28px;
+    padding: 0 12px;
+    margin: 3px;
+    border: 1px solid #4285f4;
+    border-radius: 2px;
+    font-weight: bold;
+    background: #f3f6fa;
+}
+
+/* Mobile Styling */
+@media (max-width: 660px) {
+
+    nav,
+    .footer,
+    .flex-row {
+        flex-direction: column;
+    }
+
+    nav .left-section,
+    nav .right-section,
+    footer .left-section,
+    footer .right-section {
+        justify-content: center;
+    }
+
+    button,
+    .nav-link,
+    .footer-link {
+        padding: 5px;
+        line-height: 1.3;
+        text-align: center;
+    }
+
+    .reload {
+        margin: 0px 5px;
+    }
+}
