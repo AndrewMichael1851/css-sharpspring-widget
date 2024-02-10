@@ -37,10 +37,24 @@
             <h1>cSs SharpSpring + Gravity Forms Widget</h1>
             <h3>Use this widget to create the PHP snippet for integrating Gravity Forms into a WordPress Website.</h3>
             <p>For more detailed instructions, please see the Website Deployment Checklist document in Notion.</p>
-            <button name="widget-start">
-                <a href="#" onclick="sharpspringWidget()">Start the Widget</a>
-            </button>
-            <div id="output"></div>
+
+            <form id="widgetForm">
+                <label for="webinarTitle">Webinar Name:</label>
+                <input type="text" id="webinarTitle" name="webinarTitle"><br><br>
+                
+                <label for="baseURI">baseURI:</label>
+                <input type="text" id="baseURI" name="baseURI"><br><br>
+
+                <label for="endpoint">baseURI:</label>
+                <input type="text" id="endpoint" name="endpoint"><br><br>
+
+                <label for="gravityFormID">baseURI:</label>
+                <input type="text" id="gravityFormID" name="gravityFormID"><br><br>
+                
+                <button type="submit">Submit</button>
+            </form>
+            <p>To use the form again, please reload the page.</p>
+
         </main>
         <footer>
             <div class="flex-row">
