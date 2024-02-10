@@ -91,6 +91,7 @@ function post_to_third_party_${gravityFormID}( $entry, $form ) {
 }
 
     </code></pre>
+    <p>To use the form again, please reload the page.</p>
     `;
     console.log(widgetOutput)
 
