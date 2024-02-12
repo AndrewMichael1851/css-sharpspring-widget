@@ -24,9 +24,12 @@ html {
     margin-right: auto;
 }
 
-body,
+body {
+    font-family: "Lato", "Courier New", "Courier", "Lucida Sans Typewriter", "Lucida Typewriter", "monospace";
+}
+
 code {
-    font-family: "Courier New", "Courier", "Lucida Sans Typewriter", "Lucida Typewriter", "monospace";
+    font-family: "Courier New", "Courier", "monospace";
 }
 
 nav,
@@ -42,7 +45,7 @@ h4,
 h5,
 h6,
 p {
-    margin: 0.5em 0;
+    margin-bottom: 1.4em;
 }
 
 .container {
@@ -119,6 +122,7 @@ button:focus {
 .flex-column {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     flex-basis: 100%;
     flex: 1;
 }
@@ -150,6 +154,11 @@ button,
     border-radius: 2px;
     font-weight: bold;
     background: #f3f6fa;
+}
+
+button.cta {
+    background: #75C9B7;
+    border: 1px solid black;
 }
 
 /* Mobile Styling */
