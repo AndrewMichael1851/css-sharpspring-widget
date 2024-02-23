@@ -37,24 +37,45 @@
         <main class="content">
             <h1>cSs SharpSpring + Gravity Forms Widget</h1>
             <h3>Use this widget to create the PHP snippet for integrating Gravity Forms into a WordPress Website.</h3>
-            <p>For more detailed instructions, please see the Website Deployment Checklist document in Notion.</p>
-
-            <form id="widgetForm">
-                <label for="webinarTitle">Webinar Name:</label>
-                <input type="text" id="webinarTitle" name="webinarTitle"><br><br>
-                
-                <label for="baseURI">baseURI:</label>
-                <input type="text" id="baseURI" name="baseURI"><br><br>
-
-                <label for="endpoint">endpoint:</label>
-                <input type="text" id="endpoint" name="endpoint"><br><br>
-
-                <label for="gravityFormID">Gravity Form ID:</label>
-                <input type="text" id="gravityFormID" name="gravityFormID"><br><br>
-                
-                <button type="submit">Submit</button>
-            </form>
-
+            <p>For more detailed instructions, please see the Website Deployment Checklist document in Notion. Note that by default this form uses the conventional Name / Email / Company / Industry format used across the circle S studio website.</p>
+            <div id="widgetContainer">
+                <form id="widgetForm">
+                    <label for="formTitle">Form Name:</label>
+                    <input type="text" id="formTitle" name="formTitle"><br><br>
+                    
+                    <label for="baseURI">baseURI:</label>
+                    <input type="text" id="baseURI" name="baseURI"><br><br>
+    
+                    <label for="endpoint">endpoint:</label>
+                    <input type="text" id="endpoint" name="endpoint"><br><br>
+    
+                    <label for="gravityFormID">Gravity Form ID:</label>
+                    <input type="text" id="gravityFormID" name="gravityFormID"><br><br>
+                    
+                    <button type="submit">Submit</button>
+                </form>
+                <p>To create a custom form, use this form instead:</p>
+                <form id="customWidgetForm">
+                    <h3>This is the custom form version</h3>
+                    <label for="formTitle">Form Name:</label>
+                    <input type="text" id="customFormTitle" name="formTitle"><br><br>
+                    
+                    <label for="baseURI">baseURI:</label>
+                    <input type="text" id="customBaseURI" name="baseURI"><br><br>
+        
+                    <label for="endpoint">endpoint:</label>
+                    <input type="text" id="customEndpoint" name="endpoint"><br><br>
+        
+                    <label for="gravityFormID">Gravity Form ID:</label>
+                    <input type="text" id="customGravityFormID" name="gravityFormID"><br><br>
+        
+                    <div id="fieldArea"></div>
+        
+                    <button type="button"><a href="#customWidgetForm" id="newField">Add New Field</a></button>
+                    
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
         </main>
         <footer>
             <div class="flex-row">

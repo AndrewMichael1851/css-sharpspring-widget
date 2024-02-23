@@ -32,6 +32,14 @@ code {
     font-family: "Courier New", "Courier", "monospace";
 }
 
+pre {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
 nav,
 main,
 footer {
@@ -77,6 +85,7 @@ pre code {
 
 form {
     padding: 1.5em;
+    margin: 1.5em 0em;
     border: 2px solid black;
 }
 
@@ -92,6 +101,10 @@ img {
 button {
     border: none;
     font-family: inherit;
+}
+
+.button-padding {
+    margin-bottom: 2em;
 }
 
 button:focus {
@@ -141,6 +154,12 @@ button:focus {
 .right-section {
     margin: 7px 10px;
     align-items: center;
+}
+
+.field-section {
+    background-color: #75C9B7;
+    padding: 10px;
+    margin: 10px;
 }
 
 button,
