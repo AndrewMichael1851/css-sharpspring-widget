@@ -10,8 +10,10 @@
 // Function to create a new field for the custom form.
 let fieldCount = 0;
 document.getElementById('newField').addEventListener('click', function(event) {
+    fieldCount += 1;
     let newFieldSnippet = `
         <div class="field-section">
+            <p>Please input custom field ${fieldCount}.</p>
             <label for="gravityFormFieldID${fieldCount}">Custom Field ID:</label>
             <input type="text" id="gravityFormFieldID${fieldCount}" name="gravityFormFieldID${fieldCount}"><br><br>
 
@@ -23,7 +25,6 @@ document.getElementById('newField').addEventListener('click', function(event) {
     // Print the result on the page.
     function addNewField() {
         let result = document.getElementById("fieldArea").innerHTML += newFieldSnippet;
-        fieldCount += 1;
         console.log("New Field Count: " + fieldCount);
     };
 
@@ -42,17 +43,33 @@ document.getElementById('customWidgetForm').addEventListener('submit', function(
     var endpoint = document.getElementById('customEndpoint').value;
     var gravityFormID = document.getElementById('customGravityFormID').value;
 
-    // TODO - add a for loop here to loop through the custom form fields.
+    // Prepare for loop.
+    let customFieldIDs = [];
+    let customFieldNames = [];
+
+    // Loop through the custom form fields and add the results to the above arrays.
     for (let i = 1; i <= fieldCount; i++) {
-        // Add loop stuff here
-        console.log(i);
-    }
+        let tempFieldID = document.getElementById(`gravityFormFieldID${i}`).value;
+        let tempFieldName = document.getElementById(`gravityFormFieldName${i}`).value;
+
+        customFieldIDs.push(tempFieldID);
+        customFieldNames.push(tempFieldName);
+    };
     
     // Print form data to console.
     console.log('Webinar Title:', formTitle);
     console.log('baseURI:', baseURI);
     console.log('endpoint:', endpoint);
     console.log('gravityFormID:', gravityFormID);
+    console.log(customFieldIDs);
+    console.log(customFieldNames);
+
+    // Build the Body Array
+    let bodyArray = "";
+    for (let i = 0; i < fieldCount; i++) {
+        bodyArray += `'${customFieldNames[i]}' => rgar( $entry, '${customFieldIDs[i]}' ),`
+    };
+    console.log(bodyArray);
 
     // Format the input into the code snippet.
     let widgetOutput = `
@@ -66,6 +83,7 @@ function post_to_third_party_${gravityFormID}( $entry, $form ) {
     $endpoint = '${endpoint}';
     $post_url = $baseURI . $endpoint;
     $body = array(
+        ${bodyArray}
         'First Name' => rgar( $entry, '1' ),
         'Last Name' => rgar( $entry, '3' ),
         'Email' => rgar( $entry, '4' ),
