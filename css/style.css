@@ -162,6 +162,14 @@ button:focus {
     border-radius: 4px;
     padding: 10px;
     margin: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.field-section-item input {
+    margin: 10px 0px;
+    width: 100%;
 }
 
 button,
