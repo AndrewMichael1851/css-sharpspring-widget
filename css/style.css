@@ -1,12 +1,9 @@
 /* Base Styling for Page */
 :root {
-    --border-color: #ddd;
-    --button-search-font: #3c4043;
-    --button-search-background: #f2f2f2;
-    --footer-background: #f2f2f2;
-    --footer-font: #70757a;
-    --footer-font-hover: #3c4043;
-    --footer-font-active: #ea4335;
+    --base-green: #ABD699;
+    --base-yellow: #FFE26A;
+    --accent-color-green: #ABD69933;
+    --accent-color-yellow: #FFE26A33;
 }
 
 *,
@@ -157,7 +154,7 @@ button:focus {
 }
 
 .field-section {
-    background-color: #75C9B7;
+    background-color: var(--accent-color-green);
     border: 2px solid black;
     border-radius: 4px;
     padding: 10px;
@@ -165,6 +162,10 @@ button:focus {
     display: flex;
     flex-direction: row;
     gap: 1em;
+}
+
+.field-section:hover {
+    background-color: var(--accent-color-yellow);
 }
 
 .field-section-item input {
@@ -179,15 +180,19 @@ button,
     line-height: 28px;
     padding: 0 12px;
     margin: 3px;
-    border: 1px solid #4285f4;
+    border: 1px solid black;
     border-radius: 2px;
     font-weight: bold;
     background: #f3f6fa;
 }
 
 button.cta {
-    background: #75C9B7;
+    background: var(--accent-color-green);
     border: 1px solid black;
+}
+
+button.cta:hover {
+    background: var(--accent-color-yellow)
 }
 
 /* Mobile Styling */
